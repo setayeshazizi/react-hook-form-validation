@@ -20,16 +20,6 @@ Features
   - Show/Hide Password
   - Password Strength Indicator (Weak / Medium / Strong)
 
-______________
-
-Folder Structure
-
-src/
-├─ pages/
-│   ├─ RegisterForm.jsx
-│   └─ RegisterForm.css
-└─ App.jsx
-
 _______________
 
 
@@ -54,7 +44,7 @@ Usage
  • Accept Terms & Conditions to enable submission.
  • On successful submission, a success message appears and the form data is logged in the console.
 
-⸻
+________________
 
 Technologies Used
  • React
