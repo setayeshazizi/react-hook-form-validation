@@ -1,6 +1,7 @@
  Week 5 - React Hook Form Registration Project
 
 Overview
+
 This project is a simple Registration Form built with React using React Hook Form and Yup for validation.  
 The goal of this assignment is to practice form handling, validation, and user feedback in React.
 
@@ -20,16 +21,6 @@ Features
   - Show/Hide Password
   - Password Strength Indicator (Weak / Medium / Strong)
 
-______________
-
-Folder Structure
-
-src/
-├─ pages/
-│   ├─ RegisterForm.jsx
-│   └─ RegisterForm.css
-└─ App.jsx
-
 _______________
 
 
@@ -37,7 +28,7 @@ Installation & Running
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-link>
+git clone (https://github.com/setayeshazizi/react-hook-form-validation)
 
 2. Install dependencies:
 npm install
@@ -54,7 +45,7 @@ Usage
  • Accept Terms & Conditions to enable submission.
  • On successful submission, a success message appears and the form data is logged in the console.
 
-⸻
+________________
 
 Technologies Used
  • React
