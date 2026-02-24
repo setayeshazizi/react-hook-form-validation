@@ -4,7 +4,6 @@ import * as yup from "yup";
 import { useState } from "react";
 import "./RegisterForm.css";
 
-// Yup Schema
 const schema = yup.object({
   fullName: yup
     .string()
@@ -81,26 +80,32 @@ function RegisterForm() {
             {errors.email && <p className="error">{errors.email.message}</p>}
           </div>
 
-          <div className="field" style={{ position: "relative" }}>
+          <div className="field">
             <label>Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              {...register("password")}
-              onChange={(e) => {
-                register("password").onChange(e);
-                setPasswordStrength(checkPasswordStrength(e.target.value));
-              }}
-            />
-            <button
-              type="button"
-              className="showHideBtn"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </button>
+
+            <div className="passwordWrapper">
+              <input
+                type={showPassword ? "text" : "password"}
+                {...register("password")}
+                onChange={(e) => {
+                  register("password").onChange(e);
+                  setPasswordStrength(checkPasswordStrength(e.target.value));
+                }}
+              />
+
+              <button
+                type="button"
+                className="showHideBtn"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+
             {errors.password && (
               <p className="error">{errors.password.message}</p>
             )}
+
             {passwordStrength && (
               <p className={`passwordStrength ${passwordStrength}`}>
                 Strength: {passwordStrength}
@@ -123,7 +128,7 @@ function RegisterForm() {
                 {...register("terms")}
                 className="checkbox"
               />
-             I accept the Terms & Conditions
+              I accept the Terms & Conditions
             </label>
             {errors.terms && <p className="error">{errors.terms.message}</p>}
           </div>
